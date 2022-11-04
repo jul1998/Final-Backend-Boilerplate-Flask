@@ -31,10 +31,10 @@ CORS(app)
 setup_admin(app)
 
 #####  Importar Modelos  ####
-from src.modelos import User 
+from src.modelos import User, Planets, BlockedList
 
 ##### Importar las Rutas ####
-from src.rutas import signup
+from src.rutas import signup, insert_planets, login, protected, logout
 
 
 

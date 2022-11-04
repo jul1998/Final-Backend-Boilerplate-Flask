@@ -12,7 +12,7 @@ def signup():
     #print(body['username'])     
     try:
         if body is None:
-            raise APIException("Body está vacío o email no viene en el body, es inválido" , status_code=400)
+            raise Exception("Body está vacío o email no viene en el body, es inválido" , status_code=400)
         if body['email'] is None or body['email']=="":
             raise APIException("email es inválido" , status_code=400)
         if body['password'] is None or body['password']=="":
@@ -39,3 +39,6 @@ def signup():
         db.session.rollback()
         print(err)
         return jsonify({"mensaje": "error al registrar usuario"}), 500
+
+
+
