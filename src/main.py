@@ -34,7 +34,7 @@ setup_admin(app)
 from src.modelos import User, BlockedList
 
 ##### Importar las Rutas ####
-from src.rutas import signup, login, protected, logout
+from src.rutas import signup, login
 
 
 
